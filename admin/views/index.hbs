@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin Panel</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/createpost.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            {{>navigation}}
+        </div>
+        <div class="content">
+            <div class="formContent">
+                <form class="postForm">
+                    <div class="topForm">
+                        <div>
+                            <div class="inputs">
+                                <input type="text" placeholder="search for posts">
+                                <label>Post Title</label>
+                                <input type="text" name="postTitle" class="postTitle">
+                                <label>Image url uploaded</label>
+                                <input type="text" class="postImageUrl">
+                            </div>
+                            <div class="submits">
+                                <button class="resetFormBtn">Reset</button>
+                                <button class="view viewMobBtn">View</button>
+                                <button class="view viewDesBtn">View</button>
+                                <button class="postFormBtn">Post</button>
+                            </div>
+                        </div>
+                        <div class="imageCoverUploader">
+                            <div class="imageUploadContent">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!---textarea--->
+                    <div class="textareaCover">
+                        <textarea name="postDescription" class="markupContent">
+
+                         </textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="previewContent">
+                <div class="htmlContent">
+                    
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="/js/showdown.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

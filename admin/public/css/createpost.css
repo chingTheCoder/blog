@@ -1,0 +1,107 @@
+/* .navigation ul li a:nth-child(1) {
+    color: green;
+} */
+:root{
+    --primarycolor : green;
+    --secondarycolor : #589FE5;
+    --advancecolor : red;
+    --textcolor : #555;
+}
+
+.cplink {
+    background-color: var(--secondarycolor);
+    color: white !important;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 10px;
+    background-color: rgba(88, 159, 229, 0.4);
+}
+
+.topForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ 
+.inputs input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #f0f0f0;
+}
+
+.submits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.submits button {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.postFormBtn {
+    background-color: #1877F2;
+    color: white;
+}
+
+.resetFormBtn {
+    background-color: rgb(288, 0,0, 0.7);
+    color: white;  
+}
+
+.view {
+    background-color: var(--secondarycolor);
+    color: white;
+}
+/*image uploader*/
+/*image uploader*/
+/*image uploader*/
+
+.imageUploadContent {
+    border: 1px dashed white;
+    height: 210px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.textareaCover {
+    padding-right: 10px;
+}
+
+textarea {
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 380px;
+    width: 100%;
+    border: 1px solid rgba(88, 159, 229, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+textarea:focus{
+    outline: none;
+    border: 3px dashed var(--secondarycolor);
+}
+
+.previewContent {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.htmlContent {
+    overflow-wrap: break-word;
+}

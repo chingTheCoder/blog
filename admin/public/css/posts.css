@@ -1,0 +1,11 @@
+:root{
+    --primarycolor : green;
+    --secondarycolor : #589FE5;
+    --advancecolor : red;
+    --textcolor : #555;
+}
+
+.aplink {
+    background-color: var(--secondarycolor);
+    color: white !important;
+}
