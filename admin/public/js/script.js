@@ -3,6 +3,7 @@ let htmlContent = document.querySelector(".htmlContent")
 let postForm = document.querySelector(".postForm")
 let imageUpload = document.querySelector(".imageUploadContent")
 let inputFileUpload = document.querySelector(".inputFileUploader")
+let postImageUrl = "/images/defaultimage.png"
 
 /*create form entries*/
 markdownContent.addEventListener("keyup", function (e) {

@@ -2,7 +2,7 @@ import express from "express"
 import hbs from "hbs"
 import { dirname , resolve } from "path"
 import { fileURLToPath } from "url"
-import { PrismaClient, Prisma } from '@prisma/client'
+import { PrismaClient} from '@prisma/client'
 
 let filename = fileURLToPath(import.meta.url)
 let directory = dirname(filename)
@@ -25,33 +25,29 @@ app.get("/allposts", (req, res) => {
     res.render("posts")
 })
 
-app.get("/test", async (req, res) => {
+app.post("/createpost", async (req, res) => {
+    let { postTitle , postDescription, postImage } = req.body
 
     try {
 
         let query = await prisma.Post.create({
             data : {
-                postTitle : "hello world",
-                postDescription : "post description",
-                postImage : "no url"
+                postTitle,
+                postDescription,
+                postImage
             }
         })
-
+        res.send("success")
     }
 
     catch(e) {
-        throw e
+        res.send("Database error")
     }
 
     finally {
         await prisma.$disconnect()
     }
 
-})
-
-app.post("/createpost", (req, res) => {
-    console.log(req.body)
-    res.send("success")
 })
 
 app.listen(port, () => {
