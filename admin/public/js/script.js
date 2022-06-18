@@ -1,6 +1,8 @@
 let markdownContent = document.querySelector(".markupContent")
 let htmlContent = document.querySelector(".htmlContent")
 let postForm = document.querySelector(".postForm")
+let imageUpload = document.querySelector(".imageUploadContent")
+let inputFileUpload = document.querySelector(".inputFileUploader")
 
 /*create form entries*/
 markdownContent.addEventListener("keyup", function (e) {
@@ -8,10 +10,7 @@ markdownContent.addEventListener("keyup", function (e) {
     renderHtml(markup, htmlContent)    
 })
 
-function renderHtml (data, body) {
-    let convertor = new showdown.Converter().makeHtml(data)
-    body.innerHTML = convertor
-}
+
 
 postForm.addEventListener("submit", function (e) {
     e.preventDefault()
@@ -26,6 +25,14 @@ postForm.addEventListener("submit", function (e) {
     sendFormData(data, "/createpost")
 } )
 
+imageUpload.addEventListener("click", function () {
+    inputFileUpload.click()
+})
+
+//functions
+function renderHtml (data, body) {
+    body.innerHTML = new showdown.Converter().makeHtml(data) 
+}
 
 async function sendFormData (data, url) {
     

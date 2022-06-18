@@ -69,11 +69,16 @@
 /*image uploader*/
 /*image uploader*/
 
+.inputFileUploader {
+    display: none;
+}
+
 .imageUploadContent {
     border: 1px dashed white;
     height: 210px;
     margin: 0 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .textareaCover {
