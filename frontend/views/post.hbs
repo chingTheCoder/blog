@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+      <div class="container">
+        <header>
+            <div class="mobileNavigation">
+                <div class="mobileLogo">
+                    <a href="/">
+                        <img src="/images/vt.png" height="50" width="70">
+                    </a>
+                </div>
+                <div class="burgerIcon">
+                       <div class="burgerLine"></div>
+                       <div class="burgerLine"></div>
+                </div>
+            </div>
+            <div class="desktopNavigation">
+
+            </div>
+        </header>
+        <div class="content">
+            <div class="postCover" style="background-color: white;margin: 0 15px;padding: 15px">
+                <div class="postTitle" style="margin-bottom: 15px;">
+                    <h1>{{data.postTitle}}</h1>
+                </div>
+                <hr/>
+                <div class="postMarkDown">
+                    {{data.postDescription}}
+                </div>
+                <div class="postContent" style="margin-top: 15px;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="/js/showdown.min.js"></script>
+    <script src="/js/post.js" type="module"></script>
+</body>
+</html>
